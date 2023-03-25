@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIANO</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <!-- Menu Bar -->
+        <input type="checkbox" id="check">
+        <label for="check" class="menu-btn"><i class="fas fa-bars"></i></label>
+
+        <!-- Logo -->
+        <h1 class="logo"><a href="#">PIANO</a></h1>
+
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT: HOME -->
+    <div class="content-home">
+        <!-- Background image (it changes depending the screen size)-->
+        <picture>
+            <!-- For Desktop Screen -->
+            <source srcset="images/piano.jpg" media="(min-width: 1024px)">
+
+            <!-- For Tablet Screen -->
+            <source srcset="images/piano2.jpg" media="(min-width: 480px) and (max-width: 800px)">
+
+            <!-- For Phone Screen -->
+            <source srcset="images/piano3.jpg" media="(max-width: 480px)">
+
+            <!-- IMAGE -->
+            <img src="images/piano.jpg" class="img-piano" alt="piano">
+        </picture>
+
+
+        <div class="content-home-text">
+            <h1>PIANO</h1>
+            <p>Find the best piano products and services here</p>
+        </div>
+    </div>
+
+    <!-- CONTENT: TOP BRANDS-->
+    <div class="content-brands">
+        <!-- Header -->
+        <div class="brand-item brand-title">
+            <h1>TOP BRANDS</h1>
+        </div>
+
+        <!-- Piano Brands -->
+        <div class="brand-item brand-item-1">
+            <!-- Brand Name -->
+            <h1 class="brand-name">YAMAHA</h1>
+
+            <!-- Piano Image -->
+            <img src="images/brand_yamaha.jpg" alt="yamaha">
+        </div>
+        <div class="brand-item brand-item-2">
+            <!-- Brand Name -->
+            <h1 class="brand-name">STEINWAY</h1>
+            <!-- Piano Image -->
+            <img src="images/brand_steinway.jpg" alt="steinway">
+        </div>
+        <div class="brand-item brand-item-3">
+            <!-- Brand Name -->
+            <h1 class="brand-name">KAWAI</h1>
+
+            <!-- Piano Image -->
+            <img src="images/brand_kawai.png" alt="kawai">
+        </div>
+        <div class="brand-item brand-item-4">
+            <!-- Piano Image -->
+            <!-- Brand Name -->
+            <h1 class="brand-name">CASIO</h1>
+
+            <img src="images/brand_casio.jpg" alt="casio">
+        </div>
+        <div class="brand-item brand-item-5">
+            <!-- Brand Name -->
+            <h1 class="brand-name">KORG</h1>
+
+            <!-- Piano Image -->
+            <img src="images/brand_korg.jpg" alt="korg">
+        </div>
+        <div class="brand-item brand-item-6">
+            <!-- Brand Name -->
+            <h1 class="brand-name">ROLAND</h1>
+
+            <!-- Piano Image -->
+            <img src="images/brand_roland.jpg" alt="roland">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        Contact Us: +971 846 9335 <br>
+        E-mail: piano@gmail.com <br>
+        © 2022 - 2023 PIANO
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+
+/* FLEXBOX CONTAINER */
+.container {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* STYLE ALL CARD ITEMS */
+.card-item {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px 1px black;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* STYLE ALL CHECKBOXES */
+input[type=checkbox] {
+    position: absolute;
+    display: none;
+}
+
+/* HOVER ALL CARD ITEMS (AFFECT INFO ONLY) */
+.card-item:hover .info {
+    bottom: 200px;
+    background-color: rgba(25, 25, 25, .75);
+}
+
+/* HOVER ALL CARD ITEMS (AFFECT IMAGE ONLY) */
+.card-item:hover img {
+    transform: scale(1.1);
+}
+
+/* STYLE ALL IMAGES */
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* STYLE ALL CARD'S INFO */
+.info {
+    position: relative;
+    bottom: 75px;
+    height: 100%;
+    text-align: left;
+    padding: 1px 20px;
+    background-color: rgba(25, 25, 25, .5);
+    color: white;
+    transition: .3s;
+}
+
+/* CARD'S INFO HEADER */
+.info>h2 {
+    font-size: 1.8em;
+}
+
+/* DISPLAY PC-ONLY TEXT */
+.pc-view {
+    display: inline-block;
+}
+
+/* DISABLE MOBILE-ONLY TEXT */
+.mobile-view {
+    display: none;
+}
+
+/* For Both Mobile and Tablet screens */
+@media screen and (max-width: 800px) {
+
+    /* DISPLAY PC-ONLY TEXT */
+    .pc-view {
+        display: none;
+    }
+
+    /* DISPLAY MOBILE-ONLY TEXT */
+    .mobile-view {
+        display: inline-block;
+    }
+
+    /* STYLE ALL CARD ITEMS */
+    .card-item {
+        width: 300px;
+    }
+
+    /* CHECKBOX FOR EACH CARD'S INFO */
+    #checkbox-japan:checked~.info,
+    #checkbox-korea:checked~.info,
+    #checkbox-china:checked~.info,
+    #checkbox-phili:checked~.info {
+        bottom: 200px;
+        background-color: rgba(25, 25, 25, .75);
+    }
+
+    /* CHECKBOX FOR EACH CARD'S IMAGE */
+    #checkbox-japan:checked~img,
+    #checkbox-korea:checked~img,
+    #checkbox-china:checked~img,
+    #checkbox-phili:checked~img {
+        transform: scale(1.1);
+    }
+
+    /* CARD ITEMS CLICK ANIMATION */
+    .card-item:active {
+        transform: scale(0.95);
+    }
+}
